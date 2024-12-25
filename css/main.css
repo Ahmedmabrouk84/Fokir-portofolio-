@@ -1,10 +1,14 @@
-body {
-  margin: 0;
-}
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", serif;
+}
+:root {
+  --main-color: #ff305b;
 }
 html {
   scroll-behavior: smooth;
@@ -13,10 +17,151 @@ a {
   text-decoration: none;
   color: white;
 }
-.container {
-  width: 80%;
-  margin: auto;
-}
 li {
   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans 3", serif;
+}
+.active {
+  color: var(--main-color) !important;
+}
+/* ==================== */
+nav.navbar {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+nav.navbar .navbar-brand {
+  font-size: 24px;
+  font-weight: 800;
+}
+header.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0% 100%),
+    url(../Fokir/hero\ img.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  color: #fff;
+}
+.home span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.home p {
+  font-size: 26px;
+  font-weight: 300;
+}
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+/* Wobble Top */
+@keyframes wobble-top {
+  16.65% {
+    transform: skew(-12deg);
+  }
+
+  33.3% {
+    transform: skew(10deg);
+  }
+
+  49.95% {
+    transform: skew(-6deg);
+  }
+
+  66.6% {
+    transform: skew(4deg);
+  }
+
+  83.25% {
+    transform: skew(-2deg);
+  }
+
+  100% {
+    transform: skew(0);
+  }
+}
+.wobble-top {
+  display: inline-block;
+  transform-origin: 0 100%;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &:hover {
+    animation-name: wobble-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+/* =============== */
+
+/* Wobble Bottom */
+@keyframes wobble-bottom {
+  16.65% {
+    transform: skew(-12deg);
+  }
+
+  33.3% {
+    transform: skew(10deg);
+  }
+
+  49.95% {
+    transform: skew(-6deg);
+  }
+
+  66.6% {
+    transform: skew(4deg);
+  }
+
+  83.25% {
+    transform: skew(-2deg);
+  }
+
+  100% {
+    transform: skew(0);
+  }
+}
+/* ===================== */
+.wobble-bottom {
+  display: inline-block;
+  transform-origin: 100% 0;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &:hover {
+    animation-name: wobble-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
+/* ====================== */
+@media (min-width: 1200px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1170px;
+  }
 }
