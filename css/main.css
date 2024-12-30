@@ -41,7 +41,7 @@ nav.navbar {
   z-index: 999;
 }
 nav.navbar .navbar-brand {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 header.home {
@@ -56,15 +56,19 @@ header.home {
   color: #fff;
 }
 .home span {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .home p {
-  font-size: 26px;
+  font-size: 1.625rem;
+  font-weight: 300;
+}
+.home p span {
+  font-size: 1.625rem;
   font-weight: 300;
 }
 h1 {
-  font-size: 70px;
+  font-size: 4.375rem;
   font-weight: 700;
   color: var(--main-color);
 }
@@ -110,7 +114,8 @@ h1 {
     animation-iteration-count: 1;
   }
 }
-/* =============== */
+/* ==================== */
+/* ===================== */
 
 /* Wobble Bottom */
 @keyframes wobble-bottom {
@@ -138,7 +143,6 @@ h1 {
     transform: skew(0);
   }
 }
-/* ===================== */
 .wobble-bottom {
   display: inline-block;
   transform-origin: 100% 0;
@@ -154,64 +158,34 @@ h1 {
     animation-iteration-count: 1;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.smith-content {
+  line-height: 1.75;
+}
+.smith-info .ul-content li {
+  font-size: .9375rem;
+  font-weight: 400;
+  padding: .625rem;
+}
+.smith-info .ul-content li span {
+  font-size: .9375rem;
+  font-weight: 500;
+  margin: .1875rem;
+}
+ul {
+  padding-left: 0;
+}
+h2 {
+  position: relative;
+}
+.smith-content h2::before {
+  position: absolute;
+  content: "";
+  width: 0.3125rem;
+  height: 65%;
+  left: -2.3%;
+  top: 15%;
+  background-color: var(--main-color);
+}
 
 /* ====================== */
 @media (min-width: 1200px) {

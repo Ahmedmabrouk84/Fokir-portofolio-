@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fokir</title>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,11 +33,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">About </a>
+              <a class="nav-link text-white" href="#about">About </a>
             </li>
 
             <li class="nav-item">
@@ -62,28 +65,27 @@
       </div>
     </nav>
 
-    <header class="home">
+    <header id="home" class="home">
       <div class="container">
         <div class="foker-content text-center">
           <span>Hello I'm</span>
           <h1 class="text-uppercase">Alex SMITH</h1>
-          <p>professional Web <span> </span></p>
+          <p>professional Web <span class="typing-js text-danger"> </span></p>
         </div>
       </div>
     </header>
-
     <main>
-      <section class="about-us my-5">
+      <section id="about" class="about-us my-5">
         <div class="container">
-          <div class="row">
-            <div class="col-md-5">
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-5">
               <div class="box-img">
                 <div class="smith-img">
                   <img src="Fokir/about.jpg" alt="Name of Rdam smith" />
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6 col-lg-7">
               <div class="smith-content">
                 <h2 class="text-uppercase">hello,</h2>
                 <p>
@@ -97,18 +99,26 @@
                   mollit anim id est laborum.
                 </p>
               </div>
-              <div class="smith-info">
+              <div class="smith-info p-0">
                 <ul>
                   <div class="row">
                     <div class="col-md-6">
-                      <li><span>Name:</span> Rdam smith</li>
-                      <li><span>Age:</span> 26 Year</li>
-                      <li><span>Freelance:</span> Available</li>
+                      <div class="ul-content">
+                        <ul>
+                          <li><span>Name:</span> Rdam smith</li>
+                          <li><span>Age:</span> 26 Year</li>
+                          <li><span>Freelance:</span> Available</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="col-md-6">
-                      <li><span>Job Title:</span> UI/UX Designer</li>
-                      <li><span>Location:</span> United States, US</li>
-                      <li><span>E-mail:</span> Example@gmail.com</li>
+                      <div class="ul-content">
+                        <ul>
+                          <li><span>Job Title:</span> UI/UX Designer</li>
+                          <li><span>Location:</span> United States, US</li>
+                          <li><span>E-mail:</span> Example@gmail.com</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </ul>
@@ -131,15 +141,16 @@
         </div>
       </section>
     </main>
-    <!-- <script>
+
+    <footer></footer>
+    <script>
       var typed = new Typed(".typing-js", {
-        strings: ["<i> Larry Daniels</i>", "Developer ", "Designer "],
+        strings: ["<i> Designer </i>", "Developer "],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true,
       });
-    </script> -->
-
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
