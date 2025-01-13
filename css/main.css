@@ -347,14 +347,26 @@ h2::before {
 }
 .carousel-indicators [data-bs-target] {
   text-indent: 0;
-  /* width: 15px;
-  height: 15px;
-  border-radius: 5px; */
+  width: 10px;
+  height: 10px;
+  border: solid 2px var(--main-color);
+  /* background-color: var(--main-color); */
+  border-radius: 50%;
 }
 .carousel-indicators .active {
   background: var(--main-color) none repeat scroll 0 0;
   border-radius: 10px;
-  padding: 4px 12px;
+  padding: 2px 12px;
+}
+
+.blog .blog__item h4 {
+  font-weight: 600;
+  font-size: 1.625rem;
+
+  transition: 0.3s;
+  &:hover {
+    color: var(--main-color);
+  }
 }
 /* ====================== */
 @media (min-width: 75rem) {
